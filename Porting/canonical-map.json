@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-gmicloud",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/gmicloud",
+      "implementation": [
+        "packages/gmicloud/src"
+      ],
+      "tests": [
+        "packages/gmicloud/src/gmicloud-chat-language-model.test.ts",
+        "packages/gmicloud/src/gmicloud-error.test.ts",
+        "packages/gmicloud/src/gmicloud-provider.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProvider.swift",
+      "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProviderSettings.swift"
+    ],
+    "tests": [
+      "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/FixtureDownloadTransport.swift",
+      "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/GMICloudProviderTests.swift",
+      "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider-owned settings and error policy compose the generic OpenAI-compatible wire adapter; native and legacy surfaces retain existing behavior. Baselines and gaps unchanged."
+}

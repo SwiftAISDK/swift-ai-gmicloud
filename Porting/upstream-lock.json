@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/gmicloud",
+      "reviewedVersion": "3.0.49",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.gmiCloud`, `GMICloudProvider`, `OpenAICompatibleChatModel`, `GMICloudProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-g4RNgWiujga+SEE5tnQEXbG1M0EdUmqoKGO1FFk4cVmZellwzrrwq72+I+eOT2qObVPYEl2JXDHN1vzXnR7CxA==",
+      "sourceRef": "npm:@ai-sdk/gmicloud@3.0.49",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

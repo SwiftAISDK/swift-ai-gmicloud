@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-gmicloud",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.0.0"
+    },
+    {
+      "package": "swift-ai-openai-compatible",
+      "from": "1.0.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-gmicloud",
+  "upstream": [
+    {
+      "name": "@ai-sdk/gmicloud",
+      "reviewedVersion": "3.0.49",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.gmiCloud`, `GMICloudProvider`, `OpenAICompatibleChatModel`, `GMICloudProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-g4RNgWiujga+SEE5tnQEXbG1M0EdUmqoKGO1FFk4cVmZellwzrrwq72+I+eOT2qObVPYEl2JXDHN1vzXnR7CxA==",
+      "sourceRef": "npm:@ai-sdk/gmicloud@3.0.49",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Package.swift",
+      "sha256": "de1d366bdaac46c32ad149003338f981e2c8f24c1c580049df682df613acf0c8"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Porting/map.json",
+      "sha256": "488db0b1d6e054e9517eecf4247d8e70615c40c5c16a9b824a0b29a76886ad92"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/README.md",
+      "sha256": "34d56640aab449ffba8fb2372bfde1e2cb8bf670b0e082ea13b193cf878fada4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProvider.swift",
+      "sha256": "6e7e4fd7e272bc087c810140453dafb527f53fef510656a8db95fee10a01cfbc"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProviderSettings.swift",
+      "sha256": "e39ab944464f7de1cd7a8bc223e734fd66bf884cb889856407ac09bdaa07c397"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/FixtureDownloadTransport.swift",
+      "sha256": "216b6e224d1682e4f5643cfe11c6a1b0c9d8accd9201c6314c03f0c4236f75e5"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/GMICloudProviderTests.swift",
+      "sha256": "f8808b0c04eaa18939546df3240688320b7ff7a4c33a12d254c0aab1fe979c01"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/TestSupport.swift",
+      "sha256": "6531ab409dc57509b1d3329794442407e2ee1a635afd2c8a086a1c0c34989cf0"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-gmicloud",
-  "version": "1.1.1",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.1.2",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -21,28 +21,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Adds an internal descriptive model catalog without provider/index wiring or declaration/test changes. No native request, parser, auth, error, stream or telemetry behavior changes. Update request user-agent and reviewed metadata; catalog is not a new public product API. Reviewed published upstream delta: @ai-sdk/gmicloud 3.0.53 to 3.0.58. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-openai-compatible 1.0.0 to 1.2.0."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/gmicloud 3.0.58 to 3.0.63. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-gmicloud",
   "upstream": [
     {
       "name": "@ai-sdk/gmicloud",
-      "reviewedVersion": "3.0.58",
+      "reviewedVersion": "3.0.63",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.gmiCloud`, `GMICloudProvider`, `OpenAICompatibleChatModel`, `GMICloudProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.gmiCloud`, `GMICloudProvider`, `OpenAICompatibleChatModel`, `GMICloudProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-aZ9zEv3dB3AplAuPKwDXHnf2O/NLfVeCvaG2X/XQhU3Sp0/yuw7H2nX4fSYzuymlmCH/bggS9bTQ+PZyfvp9pw==",
-      "sourceRef": "npm:@ai-sdk/gmicloud@3.0.58",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-Hi704yYZg7dT9vwsJr9HVVj3y+O1gPcX64M9PC/NRuri1NK5ILP2N1g/crjfzQLTWoroVDUWIPxUgKGZxdc6/g==",
+      "sourceRef": "npm:@ai-sdk/gmicloud@3.0.63",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "LanguageModelV4",
         "ProviderV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -61,7 +61,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/Porting/map.json",
-      "sha256": "2f538a649c49e19c84c833c9c404151d15d7a782951de5e182af8b64149643ca"
+      "sha256": "7ef975dcdeff2635fb762407180949ae3e7ce588762b46ab3e09e1f50e358387"
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/README.md",
@@ -69,7 +69,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProvider.swift",
-      "sha256": "eda6fe96e23d840545bb81a409f4b66636e100ba10ce2a7a24ce954af529916d"
+      "sha256": "ec8e3b92d2284aa7f096122066730d9ba1647120a065cb016df716a85110b8a0"
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/Sources/SwiftAIGMICloud/GMICloudProviderSettings.swift",
@@ -81,7 +81,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/GMICloudProviderTests.swift",
-      "sha256": "f30fbcd9f53b77599fbca71416059f82a073ecf56382288bb402eefdc6b3e8b2"
+      "sha256": "ec03bf559600b68eba8b64a7964c97ad8164ef20a4393b8c5e66b5a05929b329"
     },
     {
       "canonicalPath": "Packages/swift-ai-gmicloud/Tests/SwiftAIGMICloudTests/TestSupport.swift",

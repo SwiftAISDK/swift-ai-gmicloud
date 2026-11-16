@@ -22,6 +22,7 @@
     ],
     "tests": [
       "Tests/SwiftAIGMICloudTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIGMICloudTests/GMICloudOpenAICompatibleChatParityTests.swift",
       "Tests/SwiftAIGMICloudTests/GMICloudProviderTests.swift",
       "Tests/SwiftAIGMICloudTests/TestSupport.swift",
       "Tests/SwiftAIGMICloudTests/Weekly20261101CredentialsTests.swift"
